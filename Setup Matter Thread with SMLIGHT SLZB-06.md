@@ -29,19 +29,24 @@ Additionally, I set up a new Wi-Fi network in the same VLAN with **"Enhanced IoT
 ✅ My phone can connect to this Wi-Fi for pairing Matter over Thread devices (scanning the QR code).  
 ✅ Even if your phone is on another VLAN, it *should* still work if **mDNS** is enabled and you have **IPv6** properly configured on all affected VLANs.
 
+![Network devices](images/smlight/my-devices.webp)
+
 # 🔧 My Unifi Network Settings
 
 **Network settings:**
 
-![img](cvadf7zgqbme1 "Unifi Network Settings IPv4")
+### IPv4
+![Unifi IPv4 Settings](images/smlight/unifi-ipv4.webp)
 
-![img](akj1n90jqbme1 "Unifi Network Settings - IPv6")
+### IPv6
+![Unifi IPv6 Settings](images/smlight/unifi-ipv6.webp)
 
-![img](p33l07boqbme1 "Unifi Network Wifi settings 1/2")
+### Wi-Fi Settings (1/2)
+![Unifi Wi-Fi Settings 1](images/unifi-wifi1.webp)
 
 # 📡 My Wi-Fi Settings
 
-![img](62ndlttqqbme1 "Unifi Network Wifi settings 2/2")
+![Unifi Wi-Fi Settings 2](images/smlight/unifi-wifi2.webp)
 
 I kept my IoT Wi-Fi **2.4GHz-only** since most smart home devices prefer it.
 
@@ -72,6 +77,10 @@ If you need to set up **ULA IPv6 ranges**, here are some valid ones:
 
 When scanning a Matter QR code in **Home Assistant**, your phone **discovers the device and pairs over Wi-Fi**. After setup, the device no longer needs to stay connected to Wi-Fi.
 
+Here are my Home Assistant network settings;
+![Home Assistant network settings](images/smlight/home-assistant-network-settings.webp)
+
+
 **💡 Important:**  
 For me, **scanning the QR code failed every time** *until I enabled IPv6*. It *never* worked without IPv6.
 
@@ -94,7 +103,7 @@ Below is the **official guide from SMLIGHT**, with added screenshots and notes f
 
 📸 **SLZB-06:**
 
-![img](bgh6dzyhrbme1 "I'm running firmware v2.7.1")
+![SLZB-06 Settings](images/smlight/SLZB-06.mode.webp)
 
 **Setting Up the Thread Border Router Add-on (USB Connection)**
 
@@ -118,6 +127,9 @@ If you prefer network mode instead of USB:
    * **Port:** Select any USB device (a workaround for HA).
    * **Network Device:** [`192.168.1.10:6638`](http://192.168.1.10:6638) (your SMLIGHT’s IP & port).
 3. Start the add-on and enable **Start on boot + Watchdog**.
+
+![OpenThread Border Router](images/smlight/open-thread-border-router.webp)
+![OpenThread Border Router Pt2](images/smlight/open-thread-border-router2.webp)
 
 **Setting Up Matter Integration in Home Assistant**
 
