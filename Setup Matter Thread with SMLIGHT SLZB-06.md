@@ -41,18 +41,17 @@ Additionally, I set up a new Wi-Fi network in the same VLAN with **"Enhanced IoT
 ### IPv6
 ![Unifi IPv6 Settings](images/smlight/unifi-ipv6.webp)
 
-### Wi-Fi Settings (1/2)
-![Unifi Wi-Fi Settings 1](images/unifi-wifi1.webp)
-
 # 📡 My Wi-Fi Settings
 
+![Unifi Wi-Fi Settings 1](images/smlight/unifi-wifi1.webp)
 ![Unifi Wi-Fi Settings 2](images/smlight/unifi-wifi2.webp)
 
 I kept my IoT Wi-Fi **2.4GHz-only** since most smart home devices prefer it.
 
 I don’t have IPv6 from my ISP (as far as I know), but I enabled it on the VLAN anyway. I also turned on **mDNS**, though it may not be necessary since my phone is in the same VLAN as Home Assistant and the SMLIGHT SLZB-06.
+If the Wi-Fi your phone is connected too, is in a different network/VLAN as your Home Assistant, enable mDNS and IPv6 on both.
 
-If you need to set up **ULA IPv6 ranges**, here are some valid ones:
+If you need to set up **ULA IPv6 ranges**, here are some valid ones, just pick something from the list (every network/VLAN needs its own IPv6 IP range):
 
 * `fd8a:123b:c4d5:10::/64`
 * `fd1c:e56f:78a9:20::/64`
