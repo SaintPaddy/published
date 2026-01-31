@@ -1,5 +1,13 @@
 # Notes — LilyGO T-Internet-POE (v1.1) + Downloader Board
 
+---
+
+*This is for myself, so I don't forget what I did.*
+
+---
+
+
+
 **Board:** LILYGO T-Internet-POE (printed version: `v1.1`)  
 **Link:** https://lilygo.cc/products/t-internet-poe?variant=52074812965045  
 
